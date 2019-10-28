@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#65338588"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".DIceBreakers"
+    tools:showIn="@layout/activity_dice_breakers">
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="409dp"
+        android:layout_height="91dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="D-ICEBREACKERS"
+        android:textColor="#536DFE"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/questionTitle"
+        android:layout_width="249dp"
+        android:layout_height="85dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Your Question is:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Title"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/questionDisplay"
+        android:layout_width="366dp"
+        android:layout_height="103dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.403" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center_horizontal|center_vertical"
+        android:hint="Your Answer Here"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Title"
+        app:layout_constraintVertical_bias="0.628" />
+</android.support.constraint.ConstraintLayout>

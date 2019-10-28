@@ -1,5 +1,6 @@
 package com.example.dice_roller;
 
+        import android.content.Intent;
         import android.os.Bundle;
         import android.support.design.widget.FloatingActionButton;
         import android.support.design.widget.Snackbar;
@@ -8,6 +9,7 @@ package com.example.dice_roller;
         import android.view.View;
         import android.view.Menu;
         import android.view.MenuItem;
+        import android.widget.Button;
         import android.widget.EditText;
         import android.widget.TextView;
 
@@ -18,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     //Counter
     int Count = 0;
     int guessCount = 0;
-
+    Button dIceBreaker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,15 +62,21 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void on_button_click(View view){
+        dIceBreaker = (Button) findViewById(R.id.dIceBreaker);
         TextView resultDisplay = this.findViewById(R.id.result);
         EditText Num1 = this.findViewById(R.id.userNum);
         String text_check = Num1.getText().toString().trim();
+        int Num2 = Integer.parseInt(Num1.getText().toString());
 
         if(text_check.isEmpty() || text_check == null) {
-            resultDisplay.setText("Please Enter a value");
+            resultDisplay.setText("Please Enter a value between 1-6");
             //Pause for users to input values
         }
         else {
+            if(Num2 >= 7 || Num2 <= 0  ){
+                resultDisplay.setText("Please Enter a value between 1-6");
+             }
+            else{
             guessCount++;
             //Object of Number Gen
             TextView tv = this.findViewById(R.id.numView);
@@ -77,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             //(upperbound - lowerbound) + lowerbound
             int randNum = r.nextInt(7-1)+1;
 
-            int Num2 = Integer.parseInt(Num1.getText().toString());
+
 
             if(Num2 == randNum){
                 scoreBoard(view);
@@ -90,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             resultDisplay.setText("Your Number: \r" + Num2);
             guessCounter.setText("Guess Counter: \n" + guessCount );
         }
-
+        }
 
     }
 
@@ -99,7 +107,12 @@ public class MainActivity extends AppCompatActivity {
         Count++;
         TextView scoreCard = this.findViewById(R.id.score);
         scoreCard.setText("Your Score: " + Count);
+        dIceBreaker.setVisibility(android.view.View.VISIBLE);
+    }
 
+    public void dIce(View view){
+        Intent intent = new Intent(MainActivity.this, DIceBreakers.class);
+        startActivity(intent);
     }
 
 

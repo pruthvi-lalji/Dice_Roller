@@ -23,21 +23,40 @@
 
     <Button
         android:id="@+id/genButton"
-        android:layout_width="152dp"
-        android:layout_height="69dp"
+        android:layout_width="409dp"
+        android:layout_height="62dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:onClick="on_button_click"
-        android:text="Generate "
+        android:text="I am feeling lucky"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.436"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numView"
-        app:layout_constraintVertical_bias="0.822" />
+        app:layout_constraintVertical_bias="0.792" />
+
+    <Button
+        android:id="@+id/dIceBreaker"
+        android:layout_width="409dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="dIce"
+        android:text="Let's play D-ICEBREAKERS"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.428"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numView"
+        app:layout_constraintVertical_bias="0.981" />
 
     <EditText
         android:id="@+id/userNum"
@@ -48,15 +67,15 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Enter a number between 1-6"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/genButton"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numView"
-        app:layout_constraintVertical_bias="0.785" />
+        app:layout_constraintVertical_bias="0.598" />
 
     <TextView
         android:id="@+id/textView2"
@@ -67,6 +86,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:gravity="center_horizontal|center_vertical"
         android:text="Number's Game"
         android:textColor="#03A9F4"
         android:textSize="36sp"
@@ -77,14 +97,15 @@
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="217dp"
-        android:layout_height="63dp"
+        android:layout_width="301dp"
+        android:layout_height="67dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal|center_vertical"
         android:lineSpacingExtra="8sp"
         android:textAllCaps="true"
         android:textSize="24sp"
@@ -94,7 +115,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/numView"
-        app:layout_constraintVertical_bias="0.239" />
+        app:layout_constraintVertical_bias="0.131" />
 
     <TextView
         android:id="@+id/score"
@@ -106,10 +127,11 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal|center_vertical"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.443" />
@@ -124,6 +146,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal|center_vertical"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/userNum"
         app:layout_constraintEnd_toEndOf="parent"

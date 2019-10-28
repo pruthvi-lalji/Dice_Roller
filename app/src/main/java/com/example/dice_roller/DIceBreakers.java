@@ -1,5 +1,6 @@
 package com.example.dice_roller;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -54,7 +55,13 @@ public class DIceBreakers extends AppCompatActivity {
 /*        Collections.shuffle(questionList);
         questionDisplay.setText(questionList.get(0) + "");*/
 
-        questionDisplay.setText(randNum + "");
+        questionDisplay.setText(questionList.get(randNum) + "");
     }
+
+    public void cancel_Save(View view){
+        Intent intent = new Intent(DIceBreakers.this, MainActivity.class);
+        startActivity(intent);
+    }
+
 
 }

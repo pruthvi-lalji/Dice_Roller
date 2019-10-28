@@ -41,6 +41,7 @@
         android:id="@+id/questionDisplay"
         android:layout_width="366dp"
         android:layout_height="103dp"
+        android:gravity="center_horizontal|center_vertical"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,4 +63,33 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Title"
         app:layout_constraintVertical_bias="0.628" />
+
+    <Button
+        android:id="@+id/cancelBtn"
+        android:layout_width="134dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="528dp"
+        android:onClick="cancel_Save"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="134dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="528dp"
+        android:onClick="cancel_Save"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
 </android.support.constraint.ConstraintLayout>
